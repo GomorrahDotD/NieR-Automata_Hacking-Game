@@ -1,0 +1,6 @@
+Fragen, die mir so einfallen:
+mbPlayerController -> warum bekommt character movement die deltatime drauf gerechnet? soll er zunehmend schneller werden?
+                      gleiches gilt für die Rotation.
+
+                    -> woher kriegt der input.GetButton sein fire1. woher weiß er, dass das die leertaste ist?
+                    
