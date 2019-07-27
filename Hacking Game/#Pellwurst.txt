@@ -1,0 +1,7 @@
+Dokumentation:
+
+Ideen für die Gestaltung des Grounds:
+	Großer Cube, wird skaliert
+	Skalierung der 4 oberen Vertices der Eckpunkte des Level"bildes" anpassen?
+	Mesh.Bounds (local space) / Renderer.Bounds (world space)
+	
