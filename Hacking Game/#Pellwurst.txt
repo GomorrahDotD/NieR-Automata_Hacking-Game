@@ -5,3 +5,5 @@ Ideen für die Gestaltung des Grounds:
 	Skalierung der 4 oberen Vertices der Eckpunkte des Level"bildes" anpassen?
 	Mesh.Bounds (local space) / Renderer.Bounds (world space)
 	
+
+Damage: cube braucht Leben. 
