@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class mbEnemy : MonoBehaviour
 {
-    #region
+    #region Fields
     [Header("Leben")]
 
     [SerializeField]
@@ -13,6 +13,7 @@ public class mbEnemy : MonoBehaviour
     private float health;
 
     public Image healthBar;
+
     #endregion
 
     private void Start()

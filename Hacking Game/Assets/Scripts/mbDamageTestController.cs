@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class mbDamageTestController : MonoBehaviour
 {
-    private mbEnemy enemyScript;
+    private mbEnemy[] enemies;
 
 
     private void Start()
     {
-        enemyScript = FindObjectOfType(typeof(mbEnemy)) as mbEnemy;
+        enemies = FindObjectsOfType<mbEnemy>();
+      
     }
     public void OnButtonDoDamage()
     {
-        
-        enemyScript.OnButtonDoDamage();
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].OnButtonDoDamage();
+        }
     }
 }
 
