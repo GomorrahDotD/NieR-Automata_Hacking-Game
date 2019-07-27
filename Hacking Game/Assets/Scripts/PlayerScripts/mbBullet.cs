@@ -27,7 +27,9 @@ public class mbBullet : MonoBehaviour
 
         if (lifeSpan > 0)
         {
+            //forward in local space
             Vector3 movement = new Vector3(0f, 0f, 1f) * speed * Time.deltaTime;
+            //converts the local space vector to the world space vector
             movement = transform.TransformDirection(movement);
             transform.position += movement;
         }
