@@ -10,17 +10,10 @@ public class mbBullet : MonoBehaviour
     [SerializeField] private float lifeSpan = 1f;
     [SerializeField] private float speed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-
-
         // Destroys the bullet after its lifeSpan is over
         lifeSpan -= Time.deltaTime;
         Debug.Log(lifeSpan);
@@ -38,7 +31,13 @@ public class mbBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        mbEnemy enemy = collision.gameObject.GetComponent<mbEnemy>();
         Debug.Log(string.Format("Collision detected between {0} and {1}", gameObject.name, collision.collider.name));
+
+        if (enemy != null)
+        {
+            enemy.OnButtonDoDamage();
+        }
 
         Instantiate(effectPrefab, effectSpawnLocation.position, effectSpawnLocation.rotation);
         Destroy(gameObject);
