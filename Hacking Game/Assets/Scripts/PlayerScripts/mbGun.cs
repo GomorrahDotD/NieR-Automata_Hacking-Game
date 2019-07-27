@@ -36,14 +36,13 @@ public class mbGun : MonoBehaviour
 
         cooldown = Mathf.Clamp(((cooldown / fireRate) - Time.deltaTime), 0f, 1f);
         currentAmmo = Mathf.Clamp(currentAmmo + (Time.deltaTime * refillRate), 0f, ammoCapacity);
-        //Debug.Log(cooldown);
-        //Debug.Log(currentAmmo);
 
     }
 
     void ShootAmmo()
     {
+        
         audioSource.Play();
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, gunNozzle.position, gunNozzle.rotation);
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, new Vector3(gunNozzle.position.x, 0.8f, gunNozzle.position.z), gunNozzle.rotation);
     }
 }

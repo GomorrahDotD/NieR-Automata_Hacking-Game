@@ -16,7 +16,6 @@ public class mbBullet : MonoBehaviour
     {
         // Destroys the bullet after its lifeSpan is over
         lifeSpan -= Time.deltaTime;
-        Debug.Log(lifeSpan);
 
         if (lifeSpan > 0)
         {

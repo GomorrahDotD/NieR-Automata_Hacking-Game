@@ -12,7 +12,6 @@ public class mbPlayerController : MonoBehaviour
     {
         character = GetComponent<CharacterController>();
         transform.position = new Vector3(0f, 0.5f, -3.48f);
-        Debug.Log(character);
     }
 
     private void Update()
